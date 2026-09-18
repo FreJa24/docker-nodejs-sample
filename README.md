@@ -1,6 +1,6 @@
 # ToDo-Applikation
 
-Eine einfache ToDo-Applikation, die mit Node.js entwickelt wurde.
+Eine einfache ToDo-Applikation, die mit Node.js entwickelt wurde. Dieses Projekt dient als Übung im Rahmen der Abschlussaufgabe zu Markdown, Git, GitHub und Docker.
 
 ## Voraussetzungen
 
@@ -8,31 +8,32 @@ Um dieses Projekt lokal auszuführen, benötigst du:
 
 - [Node.js](https://nodejs.org) (inkl. npm)
 - [Git](https://git-scm.com/)
+- [Docker](https://www.docker.com/)
 
 ## Repository klonen
 
 Klone das Repository mit folgendem Befehl:
 
-\`\`\`bash
+```bash
 git clone https://github.com/FreJa24/docker-nodejs-sample
 cd docker-nodejs-sample
-\`\`\`
+```
 
 ## Pakete installieren
 
 Installiere die benötigten Node.js-Abhängigkeiten:
 
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 ## Anwendung lokal starten
 
 Starte die Anwendung im Entwicklungsmodus mit:
 
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 Die Anwendung ist anschliessend erreichbar unter:
 
@@ -42,19 +43,33 @@ Die Anwendung ist anschliessend erreichbar unter:
 
 Baue das Docker-Image mit folgendem Befehl:
 
-\`\`\`bash
+```bash
 docker build -t todo-app .
-\`\`\`
+```
 
 ## Anwendung mit Docker starten
 
 Starte einen Container aus dem Image:
 
-\`\`\`bash
+```bash
 docker run --name todo-container -p 3000:3000 todo-app
-\`\`\`
+```
 
 Die Anwendung ist danach erreichbar unter [http://localhost:3000](http://localhost:3000).
+
+## Anwendung mit Docker Compose starten
+
+Starte die Anwendung mit Docker Compose:
+
+```bash
+docker compose up --build
+```
+
+Oder im Hintergrund (detached):
+
+```bash
+docker compose up -d --build
+```
 
 ## Anwendung stoppen
 
@@ -70,18 +85,3 @@ Oder falls mit Docker Compose gestartet:
 ```bash
 docker compose down
 ```
-
-\`\`\`
-## Anwendung mit Docker Compose starten
-
-Starte die Anwendung mit Docker Compose:
-
-\`\`\`bash
-docker compose up --build
-\`\`\`
-
-Oder im Hintergrund (detached):
-
-\`\`\`bash
-docker compose up -d --build
-\`\`\`
