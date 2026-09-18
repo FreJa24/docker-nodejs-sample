@@ -1,6 +1,7 @@
 # ToDo-Applikation
 
-Eine einfache ToDo-Applikation, die mit Node.js entwickelt wurde. Dieses Projekt dient als Übung im Rahmen der Abschlussaufgabe zu Markdown, Git, GitHub und Docker.
+Eine einfache ToDo-Applikation, die mit Node.js entwickelt wurde.
+EN [English version](README-EN.md)
 
 ## Voraussetzungen
 
