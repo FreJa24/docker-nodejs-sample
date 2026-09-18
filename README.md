@@ -37,3 +37,28 @@ npm run dev
 Die Anwendung ist anschliessend erreichbar unter:
 
 **[http://localhost:3000](http://localhost:3000)**
+
+## Docker-Image erstellen
+
+Baue das Docker-Image mit folgendem Befehl:
+
+\`\`\`bash
+docker build -t todo-app .
+\`\`\`
+
+## Anwendung mit Docker starten
+
+Starte einen Container aus dem Image:
+
+\`\`\`bash
+docker run --name todo-container -p 3000:3000 todo-app
+\`\`\`
+
+Die Anwendung ist danach erreichbar unter [http://localhost:3000](http://localhost:3000).
+
+## Anwendung stoppen
+
+\`\`\`bash
+docker stop todo-container
+docker rm todo-container
+\`\`\`
