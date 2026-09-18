@@ -58,7 +58,30 @@ Die Anwendung ist danach erreichbar unter [http://localhost:3000](http://localho
 
 ## Anwendung stoppen
 
-\`\`\`bash
+Container stoppen und entfernen:
+
+```bash
 docker stop todo-container
 docker rm todo-container
+```
+
+Oder falls mit Docker Compose gestartet:
+
+```bash
+docker compose down
+```
+
+\`\`\`
+## Anwendung mit Docker Compose starten
+
+Starte die Anwendung mit Docker Compose:
+
+\`\`\`bash
+docker compose up --build
+\`\`\`
+
+Oder im Hintergrund (detached):
+
+\`\`\`bash
+docker compose up -d --build
 \`\`\`
